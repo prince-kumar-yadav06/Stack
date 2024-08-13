@@ -1,6 +1,6 @@
 public class stackclass{
 
-  // Implemention of stack  using LinkedList
+  // Implementation of stack  using LinkedList
   static class Node{
     int data;
     Node next;
