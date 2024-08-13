@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-// implemention of stack using Arraylist
+// implementation of stack using Arraylist
 
 public class StackArrLL {
     static class Stack{
