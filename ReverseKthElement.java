@@ -1,0 +1,42 @@
+import java.util.*;
+public class ReverseKthEle {
+    public static Queue<Integer> reverseQ(Queue<Integer> q,int  k){
+        // solve(q,k);
+
+        int s=q.size()-k;
+        while(s-- > 0){
+            int x=q.poll();
+            q.add(x);
+        }
+        return q;
+    }
+    public static void solve(Queue<Integer> q,int k){
+        if(k==0){
+            return;
+        }
+        int e=q.poll();
+        solve(q,k-1);
+        q.add(e);
+    }
+    public static void main(String args[]){
+        Queue<Integer> queue=new LinkedList<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        queue.add(40);
+        queue.add(50);
+        queue.add(60);
+        queue.add(70);
+        queue.add(80);
+        queue.add(90);
+        queue.add(100);
+
+        int k=5;
+
+        queue=reverseQ(queue,k);
+
+        while(!queue.isEmpty()){
+            System.out.println(queue.poll());
+        }
+    }
+}
